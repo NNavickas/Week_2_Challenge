@@ -175,10 +175,26 @@ footer {
 
 /* CSS media query  NOT WORKING*/
 @media screen and (max-width: 768px) {
-
-  main,
-  nav,
-  body {
-    flex-direction: column;
-  }
+  #menuGrid {
+    min-height: 250px;
+    height: 120vh;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 88% 2%;
+    grid-template-areas:
+      "position1 position2"
+      "position3 categoryGrid"
+      "position5 contactinfo";
 }
+
+  #categoryGrid {
+      min-height: 250x;
+      height: 70vh;
+      grid-template-columns: 75% 25%;
+      grid-template-rows: 75% 25%;
+      grid-template-areas:
+        "PW" 
+        "C1"
+        "C2" 
+        "C3";
+    } 
+  }
