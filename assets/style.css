@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: var(--border-theme);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  color: var(--pink);
+}
+
+header {
+  background-color: var(--border-theme);
+}
+
+.hero-banner {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--border-theme);
+}
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  align-items:center;
+}
+
+
+/*root formatting info*/
+:root {
+  --background-theme1: rgb(66, 85, 255);
+  --border-theme: grey;
+  --border: 3px solid;
+  --pink: rgba(241, 100, 211, 0.9);
+  --lightpink: rgba(200, 166, 198, 0.9);
+  --white: #fff;
+}
+
+/*styling for headings*/
+
+.heading {
+  padding: 0px 15px 15px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: var(--white);
+  background-color: rgba(53, 52, 59, 0.89);
+}
+
+.sub-heading {
+  padding: 0px 20px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--green);
+  background-color: rgba(53, 52, 59, 0.89);
+}
+
+/* Grid CSS */
+
+#menuGrid {
+  background-color: var(--background-theme);
+  margin: 0px 5%;
+  display: grid;
+  min-height: 250x;
+  height: 120vh;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-areas:
+    "position1 position2"
+    "position3 categoryGrid"
+    "position5 contactinfo";
+}
+
+.page-wrapper { 
+  color: var(--white);
+}
+
+#about {
+  grid-area: position1;
+  text-align: right;
+  font-size: 30px;
+}
+
+#work {
+  grid-area: position3;
+  text-align: right;
+  font-size: 30px;
+}
+
+#contact- {
+  grid-area: position5;
+  text-align: bottom-right;
+  font-size: 30px;
+}
+
+#desc_1 {
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+  grid-area: position2;
+  color: var(--lightpink);
+}
+
+#contact_ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 70px;
+  grid-area: contactinfo;
+}
+
+#categoryGrid {
+  margin: 0px 5%;
+  display: grid;
+  min-height: 250x;
+  height: 70vh;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 75% 25%;
+  grid-template-areas:
+    "PW C1"
+    "C2 C3";
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  border: var(--border) var(--pink);
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+#prework {
+  grid-area: PW;
+  background-image: url("../assets/images/studyguide.jpg");
+}
+
+#inclass1 {
+  grid-area: C1;
+  background-image: url("../assets/images/access.jpg");
+}
+
+#inclass2 {
+  grid-area: C2;
+  background-image: url("../assets/images/Portfolio-Desk.jpg");
+}
+
+#inclass3 {
+  grid-area: C3;
+  background-image: url("../assets/images/tbd.jpg");
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--lightpink)
+}
+
+/* CSS media query  NOT WORKING*/
+@media screen and (max-width: 768px) {
+
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
