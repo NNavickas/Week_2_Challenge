@@ -35,7 +35,7 @@ header {
 
 .icons {
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 
 
@@ -83,7 +83,7 @@ header {
     "position5 contactinfo";
 }
 
-.page-wrapper { 
+.page-wrapper {
   color: var(--white);
 }
 
@@ -177,7 +177,8 @@ footer {
 @media screen and (max-width: 768px) {
 
   main,
-  nav {
+  nav,
+  body {
     flex-direction: column;
   }
 }
